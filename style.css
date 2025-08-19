@@ -759,3 +759,35 @@ input:checked + label .description {
     background: #b47d5f;
     color: white;
 }
+.lang-switcher button {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.lang-switcher button:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+/* Default English fonts */
+body {
+    font-family: 'Merriweather', serif;
+}
+
+/* Arabic fonts */
+body.arabic h1, 
+body.arabic h2, 
+body.arabic h3 {
+    font-family: 'Cairo', 'Amiri', serif;
+}
+
+body.arabic p, 
+body.arabic a, 
+body.arabic li {
+    font-family: 'Tajawal', sans-serif;
+}

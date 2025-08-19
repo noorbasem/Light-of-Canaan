@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Light of Canaan</title>
     <!-- Linking Google Fonts for typography -->
+     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@700&family=Tajawal&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Merriweather&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
      <!-- Linking Swiper CSS for the interactive slider -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
@@ -21,20 +22,26 @@
             </div>
              <!-- Logo of the website -->
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#content">Content</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#favorite">Favorite</a></li>
+                <li><a href="#home" data-key="nav_home">Home</a></li>
+                <li><a href="#content" data-key="nav_content">Content</a></li>
+                <li><a href="#about" data-key="nav_about">About Us</a></li>
+                <li><a href="#favorite" data-key="nav_favorite">Favorite</a></li>
             </ul>
+            
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('ar')">AR</button>
+        </div>
         </nav>
     </header>
       <!-- Home Section -->
 
     <section id="home" class="home-section">
         <div class="hero">
-            <h1 class="hero-title">Light of Canaan</h1>
-            <p class="hero-text">
-               The story of the land that bleeds freedom and dignity, the land of olives and honor, the land of the ancient Canaanites, where history embraces hope, is Palestine.
+            <h1 class="hero-title" data-key="home_title">Light of Canaan</h1>
+            <p class="hero-text" data-key="home_text">
+               The story of the land that bleeds freedom and dignity, the land of olives and honor, the land of the ancient Canaanites, where history embraces hope, is Palestine
             </p>
         </div>
     </section> 
@@ -48,170 +55,170 @@
         </div>
         <!-- Menu for content sections -->
         <ul class="content-menu">
-            <li><a href="#cities">Cities</a></li>
-            <li><a href="#landmarks">Historical Landmarks</a></li>
-            <li><a href="#heritage">Palestinian Heritage</a></li>
-            <li><a href="#cuisine">Palestinian Cuisine</a></li>
-            <li><a href="#map">Map</a></li>
+            <li><a href="#cities" data-key="content_cities">Cities</a></li>
+            <li><a href="#landmarks" data-key="content_landmarks">Historical Landmarks</a></li>
+            <li><a href="#heritage" data-key="content_heritage">Palestinian Heritage</a></li>
+            <li><a href="#cuisine" data-key="content_cuisine">Palestinian Cuisine</a></li>
+            <li><a href="#map" data-key="content_map">Map</a></li>
         </ul>
     </div>
     <div class="content-hero">
-        <h1>Unveil the Heart of the Holy Land</h1>
-        <p>Walk through its traditions, landscapes, and vibrant life..</p>
+        <h1 data-key="content_title">Unveil the Heart of the Holy Land</h1>
+        <p data-key="content_text">Walk through its traditions, landscapes, and vibrant life</p>
     </div>
 </section>
 
         <!-- Cities Section displaying information about Palestinian cities -->
 <div id="cities" class="cities-section">
-    <h2 class="section-title">Cities of Palestine</h2>
+    <h2 class="section-title" data-key="cities_title">Cities of Palestine</h2>
     <div class="cities-container">
 
      <!-- City cards -->
          <!-- Safed -->
         <div class="city-card"  id="safed">
             <img src="image/Safed.jpg" alt="Safed">
-            <h3>Safed</h3>
-            <p>A city of art and beauty, sparkling among the Galilee mountains with its enchanting old alleys.</p>
-            <a href="https://en.wikipedia.org/wiki/Safed" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_safed_name">Safed</h3>
+            <p data-key="city_safed_desc">A city of art and beauty, sparkling among the Galilee mountains with its enchanting old alleys.</p>
+            <a href="https://en.wikipedia.org/wiki/Safed" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
          <!-- Acre -->
         <div class="city-card"  id="acre">
             <img src="image/Acre.webp" alt="Acre">
-            <h3>Acre</h3>
-            <p>A city of history and sea, where civilizations meet on its ancient shores.</p>
-            <a href="https://en.wikipedia.org/wiki/Acre,_Israel" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_acre_name">Acre</h3>
+            <p data-key="city_acre_desc">A city of history and sea, where civilizations meet on its ancient shores.</p>
+            <a href="https://en.wikipedia.org/wiki/Acre,_Israel" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Tiberias -->
         <div class="city-card"  id="tiberias">
             <img src="image/Tiberias.jpg" alt="Tiberias">
-            <h3>Tiberias</h3>
-            <p>The pearl of the Dead Sea, where warm waters and sacred history unite.</p>
-            <a href="https://en.wikipedia.org/wiki/Tiberias" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_tiberias_name">Tiberias</h3>
+            <p data-key="city_tiberias_desc">The pearl of the Dead Sea, where warm waters and sacred history unite.</p>
+            <a href="https://en.wikipedia.org/wiki/Tiberias" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Haifa -->
         <div class="city-card"  id="haifa">
             <img src="image/Haifa.webp" alt="Haifa">
-            <h3>Haifa</h3>
-            <p>The city of coexistence and the stunning Bahá’í Gardens overlooking the Mediterranean coast.</p>
-            <a href="https://en.wikipedia.org/wiki/Haifa" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_haifa_name">Haifa</h3>
+            <p data-key="city_haifa_desc">The city of coexistence and the stunning Bahá’í Gardens overlooking the Mediterranean coast.</p>
+            <a href="https://en.wikipedia.org/wiki/Haifa" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Nazareth -->
         <div class="city-card"  id="nazareth">
             <img src="image/Nazareth.jpg" alt="Nazareth">
-            <h3>Nazareth</h3>
-            <p>The city of annunciation and purity, radiating spiritual heritage and natural beauty.</p>
-            <a href="https://en.wikipedia.org/wiki/Nazareth" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_nazareth_name">Nazareth</h3>
+            <p data-key="city_nazareth_desc">The city of annunciation and purity, radiating spiritual heritage and natural beauty.</p>
+            <a href="https://en.wikipedia.org/wiki/Nazareth" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Beisan -->
         <div class="city-card"  id="beisan">
             <img src="image/Beisan.jpg" alt="Beisan">
-            <h3>Beisan</h3>
-            <p>The green city of the valley, famous for its archaeological sites and peaceful atmosphere.</p>
-            <a href="https://en.wikipedia.org/wiki/Beit_She%27an" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_beisan_name">Beisan</h3>
+            <p data-key="city_beisan_desc">The green city of the valley, famous for its archaeological sites and peaceful atmosphere.</p>
+            <a href="https://en.wikipedia.org/wiki/Beit_She%27an" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Jenin -->
         <div class="city-card"  id="jenin">
             <img src="image/Jenin.jpg" alt="Jenin">
-            <h3>Jenin</h3>
-            <p>The gateway to the Galilee, blending lush nature with a strong spirit of resilience.</p>
-            <a href="https://en.wikipedia.org/wiki/Jenin" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_jenin_name">Jenin</h3>
+            <p data-key="city_jenin_desc">The gateway to the Galilee, blending lush nature with a strong spirit of resilience.</p>
+            <a href="https://en.wikipedia.org/wiki/Jenin" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Tulkarm -->
         <div class="city-card"  id="tulkarm">
             <img src="image/Tulkarm.jpg" alt="Tulkarm">
-            <h3>Tulkarm</h3>
-            <p>The city of olives and palms, the beating heart of the coastal plain.</p>
-            <a href="https://en.wikipedia.org/wiki/Tulkarm" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_tulkarm_name">Tulkarm</h3>
+            <p data-key="city_tulkarm_desc">The city of olives and palms, the beating heart of the coastal plain.</p>
+            <a href="https://en.wikipedia.org/wiki/Tulkarm" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Nablus -->
         <div class="city-card"  id="nablus">
             <img src="image/Nablus.jpg" alt="Nablus">
-            <h3>Nablus</h3>
-            <p>The city of kunafa and mountains, rich in ancient history and vibrant culture.</p>
-            <a href="https://en.wikipedia.org/wiki/Nablus" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_nablus_name">Nablus</h3>
+            <p data-key="city_nablus_desc">The city of kunafa and mountains, rich in ancient history and vibrant culture.</p>
+            <a href="https://en.wikipedia.org/wiki/Nablus" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Ramallah -->
         <div class="city-card"  id="ramallah">
             <img src="image/Ramallah.jpg" alt="Ramallah">
-            <h3>Ramallah</h3>
-            <p>The capital of culture and arts, a modern city that preserves its authenticity.</p>
-            <a href="https://en.wikipedia.org/wiki/Ramallah" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_ramallah_name">Ramallah</h3>
+            <p data-key="city_ramallah_desc">The capital of culture and arts, a modern city that preserves its authenticity.</p>
+            <a href="https://en.wikipedia.org/wiki/Ramallah" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Lod -->
         <div class="city-card"  id="lod">
             <img src="image/Lod.jpg" alt="Lod">
-            <h3>Lod</h3>
-            <p>A city of diverse history, a crossroads between past and present.</p>
-            <a href="https://en.wikipedia.org/wiki/Lod" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_lod_name">Lod</h3>
+            <p data-key="city_lod_desc">A city of diverse history, a crossroads between past and present.</p>
+            <a href="https://en.wikipedia.org/wiki/Lod" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Jericho -->
         <div class="city-card"  id="jericho">
             <img src="image/Jericho.webp" alt="Jericho">
-            <h3>Jericho</h3>
-            <p>The oldest inhabited city in the world, where springs and greenery thrive in the heart of the desert.</p>
-            <a href="https://en.wikipedia.org/wiki/Jericho" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_jericho_name">Jericho</h3>
+            <p data-key="city_jericho_desc">The oldest inhabited city in the world, where springs and greenery thrive in the heart of the desert.</p>
+            <a href="https://en.wikipedia.org/wiki/Jericho" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Ramla -->
         <div class="city-card"  id="ramla">
             <img src="image/Ramla.webp" alt="Ramla">
-            <h3>Ramla</h3>
-            <p>The city of golden sands, rich with historical ruins and the spirit of the present.</p>
-            <a href="https://en.wikipedia.org/wiki/Ramla" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_ramla_name">Ramla</h3>
+            <p data-key="city_ramla_desc">The city of golden sands, rich with historical ruins and the spirit of the present.</p>
+            <a href="https://en.wikipedia.org/wiki/Ramla" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Jaffa -->
         <div class="city-card"  id="yaffa">
             <img src="image/JAFFA.jpg" alt="Jaffa">
-            <h3>Jaffa</h3>
-            <p>The city of the port and old tales, where the waves whisper secrets of the past.</p>
-            <a href="https://en.wikipedia.org/wiki/Jaffa" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_jaffa_name">Jaffa</h3>
+            <p data-key="city_jaffa_desc">The city of the port and old tales, where the waves whisper secrets of the past.</p>
+            <a href="https://en.wikipedia.org/wiki/Jaffa" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Jerusalem -->
         <div class="city-card"  id="jerusalem" >
             <img src="image/Jerusalem.jpg" alt="Jerusalem">
-            <h3>Jerusalem</h3>
-            <p>The city of peace and holiness, the meeting place of religions and ancient history.</p>
-            <a href="https://en.wikipedia.org/wiki/Jerusalem" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_jerusalem_name">Jerusalem</h3>
+            <p data-key="city_jerusalem_desc">The city of peace and holiness, the meeting place of religions and ancient history.</p>
+            <a href="https://en.wikipedia.org/wiki/Jerusalem" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Bethlehem -->
         <div class="city-card"  id="bethlehem">
             <img src="image/Bethlehem.jpg" alt="Bethlehem">
-            <h3>Bethlehem</h3>
-            <p>The city of birth, embracing light and human messages through the ages.</p>
-            <a href="https://en.wikipedia.org/wiki/Bethlehem" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_bethlehem_name">Bethlehem</h3>
+            <p data-key="city_bethlehem_desc">The city of birth, embracing light and human messages through the ages.</p>
+            <a href="https://en.wikipedia.org/wiki/Bethlehem" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Hebron -->
         <div class="city-card"  id="hebron"> 
             <img src="image/Hebron.jpg" alt="Hebron">
-            <h3>Hebron</h3>
-            <p>The city of fathers and ancestors, where history and nobility dwell in ancient alleys.</p>
-            <a href="https://en.wikipedia.org/wiki/Hebron" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_hebron_name">Hebron</h3>
+            <p data-key="city_hebron_desc">The city of fathers and ancestors, where history and nobility dwell in ancient alleys.</p>
+            <a href="https://en.wikipedia.org/wiki/Hebron" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Gaza -->
         <div class="city-card"  id="gaza">
             <img src="image/GAZA.jpeg" alt="Gaza">
-            <h3>Gaza</h3>
-            <p>The city of steadfastness and willpower, the heart of resistance beats in its streets.</p>
-            <a href="https://en.wikipedia.org/wiki/Gaza_City" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_gaza_name">Gaza</h3>
+            <p data-key="city_gaza_desc">The city of steadfastness and willpower, the heart of resistance beats in its streets.</p>
+            <a href="https://en.wikipedia.org/wiki/Gaza_City" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Beersheba -->
         <div class="city-card"  id="beersheba">
             <img src="image/Beersheba.jpg" alt="Beersheba">
-            <h3>Beersheba</h3>
-            <p>The city of the renewed desert, where tradition and modernity meet in the south.</p>
-            <a href="https://en.wikipedia.org/wiki/Beersheba" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_beersheba_name">Beersheba</h3>
+            <p data-key="city_beersheba_desc">The city of the renewed desert, where tradition and modernity meet in the south.</p>
+            <a href="https://en.wikipedia.org/wiki/Beersheba" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
         <!-- Negev Desert -->
         <div class="city-card"  id="negev" >
             <img src="image/Negev Desert.jpg" alt="Negev Desert">
-            <h3>Negev Desert</h3>
-            <p>Vast stretches of golden sands, where calm and desert beauty captivate hearts.</p>
-            <a href="https://en.wikipedia.org/wiki/Negev" target="_blank" class="read-more">Read More</a>
+            <h3 data-key="city_negev_name">Negev Desert</h3>
+            <p data-key="city_negev_desc">Vast stretches of golden sands, where calm and desert beauty captivate hearts.</p>
+            <a href="https://en.wikipedia.org/wiki/Negev" target="_blank" class="read-more" data-key="read_more">Read More</a>
         </div>
     </div>
 </div>
           <!-- Historical landmarks section with interactive slider -->
 <div id="landmarks" class="landmarks-section">
-    <h2 class="section-title">Historical Landmarks</h2>
+    <h2 class="section-title" data-key="landmark_aqsa_name">Historical Landmarks</h2>
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
              <!-- Landmark slides -->
@@ -219,189 +226,189 @@
 <div class="swiper-slide landmark-slide">
     <img src="image/Al-Aqsa Mosque.webp" alt="Al-Aqsa Mosque">
     <div class="landmark-info">
-        <h3>Al-Aqsa Mosque</h3>
-        <p>Jerusalem</p>
-        <a href="https://en.wikipedia.org/wiki/Al-Aqsa_Mosque" target="_blank">Read More</a>
+        <h3 data-key="landmark_aqsa_name">Al-Aqsa Mosque</h3>
+        <p data-key="landmark_aqsa_location">Jerusalem</p>
+        <a href="https://en.wikipedia.org/wiki/Al-Aqsa_Mosque" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Dome of the Rock -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Dome of the Rock.avif" alt="Dome of the Rock">
     <div class="landmark-info">
-        <h3>Dome of the Rock</h3>
-        <p>Jerusalem</p>
-        <a href="https://en.wikipedia.org/wiki/Dome_of_the_Rock" target="_blank">Read More</a>
+        <h3 data-key="landmark_dome_name">Dome of the Rock</h3>
+        <p data-key="landmark_dome_location">Jerusalem</p>
+        <a href="https://en.wikipedia.org/wiki/Dome_of_the_Rock" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Church of the Nativity -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Church-of-the-Nativity.jpg" alt="Church of the Nativity">
     <div class="landmark-info">
-        <h3>Church of the Nativity</h3>
-        <p>Bethlehem</p>
-        <a href="https://en.wikipedia.org/wiki/Church_of_the_Nativity" target="_blank">Read More</a>
+        <h3 data-key="landmark_nativity_name">Church of the Nativity</h3>
+        <p data-key="landmark_nativity_location">Bethlehem</p>
+        <a href="https://en.wikipedia.org/wiki/Church_of_the_Nativity" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Barquq Castle -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Barquq Castle.jpg" alt="Barquq Castle">
     <div class="landmark-info">
-        <h3>Barquq Castle</h3>
-        <p>Gaza</p>
-        <a href="https://en.wikipedia.org/wiki/Barquq_Castle" target="_blank">Read More</a>
+        <h3 data-key="landmark_barquq_name">Barquq Castle</h3>
+        <p data-key="landmark_barquq_location">Gaza</p>
+        <a href="https://en.wikipedia.org/wiki/Barquq_Castle" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Ibrahimi Mosque -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Ibrahimi Mosque.jpg" alt="Ibrahimi Mosque">
     <div class="landmark-info">
-        <h3>Ibrahimi Mosque</h3>
-        <p>Hebron</p>
-        <a href="https://en.wikipedia.org/wiki/Cave_of_the_Patriarchs" target="_blank">Read More</a>
+        <h3 data-key="landmark_ibrahimi_name">Ibrahimi Mosque</h3>
+        <p data-key="landmark_ibrahimi_location">Hebron</p>
+        <a href="https://en.wikipedia.org/wiki/Cave_of_the_Patriarchs" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- El-Jazzar Mosque -->
 <div class="swiper-slide landmark-slide">
     <img src="image/El-Jazzar Mosque.webp" alt="El-Jazzar Mosque">
     <div class="landmark-info">
-        <h3>El-Jazzar Mosque</h3>
-        <p>Acre</p>
-        <a href="https://en.wikipedia.org/wiki/El-Jazzar_Mosque" target="_blank">Read More</a>
+        <h3 data-key="landmark_jazzar_name">El-Jazzar Mosque</h3>
+        <p data-key="landmark_jazzar_location">Acre</p>
+        <a href="https://en.wikipedia.org/wiki/El-Jazzar_Mosque" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Mount of Temptation -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Mount of Temptation.jpg" alt="Mount of Temptation">
     <div class="landmark-info">
-        <h3>Mount of Temptation</h3>
-        <p>Jericho</p>
-        <a href="https://en.wikipedia.org/wiki/Mount_of_Temptation" target="_blank">Read More</a>
+        <h3 data-key="landmark_temptation_name">Mount of Temptation</h3>
+        <p data-key="landmark_temptation_location">Jericho</p>
+        <a href="https://en.wikipedia.org/wiki/Mount_of_Temptation" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Jaffa Port -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Jaffa Port.avif" alt="Jaffa Port">
     <div class="landmark-info">
-        <h3>Jaffa Port</h3>
-        <p>Jaffa</p>
-        <a href="https://en.wikipedia.org/wiki/Jaffa_Port" target="_blank">Read More</a>
+        <h3 data-key="landmark_jaffa_port_name">Jaffa Port</h3>
+        <p data-key="landmark_jaffa_port_location">Jaffa</p>
+        <a href="https://en.wikipedia.org/wiki/Jaffa_Port" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Sebastia -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Sebastia.jpg" alt="Sebastia">
     <div class="landmark-info">
-        <h3>Sebastia</h3>
-        <p>Nablus</p> 
-        <a href="https://en.wikipedia.org/wiki/Sebastia,_Nablus" target="_blank">Read More</a>
+        <h3 data-key="landmark_sebastia_name">Sebastia</h3>
+        <p data-key="landmark_sebastia_location">Nablus</p> 
+        <a href="https://en.wikipedia.org/wiki/Sebastia,_Nablus" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Beit Guvrin Caves -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Beit Guvrin Caves.jpg" alt="Beit Guvrin Caves">
     <div class="landmark-info">
-        <h3>Beit Guvrin Caves</h3>
-        <p>Beit Guvrin</p>
-        <a href="https://en.wikipedia.org/wiki/Beit_Guvrin-Maresha_National_Park" target="_blank">Read More</a>
+        <h3 data-key="landmark_beitguvrin_name">Beit Guvrin Caves</h3>
+        <p data-key="landmark_beitguvrin_location">Beit Guvrin</p>
+        <a href="https://en.wikipedia.org/wiki/Beit_Guvrin-Maresha_National_Park" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- White Mosque -->
 <div class="swiper-slide landmark-slide">
     <img src="image/White Mosque.jpg" alt="White Mosque">
     <div class="landmark-info">
-        <h3>White Mosque</h3>
-        <p>Ramla</p>
-        <a href="https://en.wikipedia.org/wiki/White_Mosque_of_Ramle" target="_blank">Read More</a>
+        <h3 data-key="landmark_white_name">White Mosque</h3>
+        <p data-key="landmark_white_location">Ramla</p>
+        <a href="https://en.wikipedia.org/wiki/White_Mosque_of_Ramle" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Maqam An-Nabi Musa -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Maqam An-Nabi Musa.webp" alt="Maqam An-Nabi Musa">
     <div class="landmark-info">
-        <h3>Maqam An-Nabi Musa</h3>
-        <p>Jericho</p>
-        <a href="https://en.wikipedia.org/wiki/Nabi_Musa" target="_blank">Read More</a>
+        <h3 data-key="landmark_musa_name">Maqam An-Nabi Musa</h3>
+        <p data-key="landmark_musa_location">Jericho</p>
+        <a href="https://en.wikipedia.org/wiki/Nabi_Musa" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Mount Gerizim -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Mount Gerizim.jpg" alt="Mount Gerizim">
     <div class="landmark-info">
-        <h3>Mount Gerizim</h3>
-        <p>Nablus</p>
-        <a href="https://en.wikipedia.org/wiki/Mount_Gerizim" target="_blank">Read More</a>
+        <h3 data-key="landmark_gerizim_name">Mount Gerizim</h3>
+        <p data-key="landmark_gerizim_location">Nablus</p>
+        <a href="https://en.wikipedia.org/wiki/Mount_Gerizim" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Mount of Olives -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Mount of Olives.webp" alt="Mount of Olives">
     <div class="landmark-info">
-        <h3>Mount of Olives</h3>
-        <p>Jerusalem</p>
-        <a href="https://en.wikipedia.org/wiki/Mount_of_Olives" target="_blank">Read More</a>
+        <h3 data-key="landmark_olives_name">Mount of Olives</h3>
+        <p data-key="landmark_olives_location">Jerusalem</p>
+        <a href="https://en.wikipedia.org/wiki/Mount_of_Olives" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Hisham's Palace -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Hishams-Palace.jpg" alt="Hisham's Palace">
     <div class="landmark-info">
-        <h3>Hisham's Palace</h3>
-        <p>Jericho</p>
-        <a href="https://en.wikipedia.org/wiki/Hisham%27s_Palace" target="_blank">Read More</a>
+        <h3 data-key="landmark_hisham_name">Hisham's Palace</h3>
+        <p data-key="landmark_hisham_location">Jericho</p>
+        <a href="https://en.wikipedia.org/wiki/Hisham%27s_Palace" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Khan al-Umdan -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Khan al-Umdan.webp" alt="Khan al-Umdan">
     <div class="landmark-info">
-        <h3>Khan al-Umdan</h3>
-        <p>Acre</p>
-        <a href="https://en.wikipedia.org/wiki/Khan_al-Umdan" target="_blank">Read More</a>
+        <h3 data-key="landmark_khan_name">Khan al-Umdan</h3>
+        <p data-key="landmark_khan_location">Acre</p>
+        <a href="https://en.wikipedia.org/wiki/Khan_al-Umdan" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Church of Saint George -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Church_of_Saint_George_.jpg" alt="Church of Saint George">
     <div class="landmark-info">
-        <h3>Church of Saint George</h3>
-        <p>Caesarea</p>
-        <a href="https://en.wikipedia.org/wiki/Church_of_Saint_George_(Tulkarm)" target="_blank">Read More</a>
+        <h3 data-key="landmark_george_name">Church of Saint George</h3>
+        <p data-key="landmark_george_location">Caesarea</p>
+        <a href="https://en.wikipedia.org/wiki/Church_of_Saint_George_(Tulkarm)" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Stella Maris Monastery -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Stella Maris Monastery.jpg" alt="Stella Maris Monastery">
     <div class="landmark-info">
-        <h3>Stella Maris Monastery</h3>
-        <p>Haifa</p>
-        <a href="https://en.wikipedia.org/wiki/Stella_Maris_Monastery" target="_blank">Read More</a>
+        <h3 data-key="landmark_stella_name">Stella Maris Monastery</h3>
+        <p data-key="landmark_stella_location">Haifa</p>
+        <a href="https://en.wikipedia.org/wiki/Stella_Maris_Monastery" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- Baháʼí World Centre -->
 <div class="swiper-slide landmark-slide">
     <img src="image/Baháʼí World Centre.webp" alt="Baháʼí World Centre">
     <div class="landmark-info">
-        <h3>Baháʼí World Centre</h3>
-        <p>Haifa</p>
-        <a href="https://en.wikipedia.org/wiki/Bah%C3%A1%CA%BC%C3%AD_World_Centre" target="_blank">Read More</a>
+        <h3 data-key="landmark_bahai_name">Baháʼí World Centre</h3>
+        <p data-key="landmark_bahai_location">Haifa</p>
+        <a href="https://en.wikipedia.org/wiki/Bah%C3%A1%CA%BC%C3%AD_World_Centre" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>
 <!-- German Colony -->
 <div class="swiper-slide landmark-slide">
     <img src="image/German Colony, Haifa.jpg" alt="German Colony">
     <div class="landmark-info">
-        <h3>German Colony</h3>
-        <p>Haifa</p>
-        <a href="https://en.wikipedia.org/wiki/German_Colony,_Haifa" target="_blank">Read More</a>
+        <h3 data-key="landmark_german_name">German Colony</h3>
+        <p data-key="landmark_german_location">Haifa</p>
+        <a href="https://en.wikipedia.org/wiki/German_Colony,_Haifa" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>    
 <!-- Avdat -->        
 <div class="swiper-slide landmark-slide">
     <img src="image/Avdat.jpg" alt="Avdat">
     <div class="landmark-info">
-        <h3>Avdat</h3>
-        <p>Negev Desert</p>
-        <a href="https://en.wikipedia.org/wiki/Avdat" target="_blank">Read More</a>
+        <h3 data-key="landmark_avdat_name">Avdat</h3>
+        <p data-key="landmark_avdat_location">Negev Desert</p>
+        <a href="https://en.wikipedia.org/wiki/Avdat" target="_blank" data-key="read_more">Read More</a>
     </div>
 </div>        
         </div>
@@ -412,155 +419,155 @@
 </div>
               <!-- Palestinian heritage section -->
 <section id="heritage" class="heritage-section">
- <h2 class="section-title">Palestinian Heritage</h2>
+ <h2 class="section-title"  data-key="heritage_title">Palestinian Heritage</h2>
     <div class="container">
                 <!-- Heritage items -->
         <div class="slide">
             <div class="item" style="background-image: url(image/Palestinian\ Embroidery\ \(Tatreez\).jpg);">
                 <div class="content">
-                    <div class="name">Palestinian Embroidery (Tatreez)</div>
-                    <div class="des">A traditional hand-stitched art that tells stories through colorful patterns, unique to each village.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Tatreez')">Read More</button>
+                    <div class="name" data-key="heritage_tatreez_name">Palestinian Embroidery (Tatreez)</div>
+                    <div class="des" data-key="heritage_tatreez_desc">A traditional hand-stitched art that tells stories through colorful patterns, unique to each village.</div>
+                    <button data-key="read_more" onclick="window.open('https://en.wikipedia.org/wiki/Tatreez')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Dabke\ Dance.jpg);">
                 <div class="content">
-                    <div class="name">Dabke Dance</div>
-                    <div class="des">A vibrant folk dance performed during celebrations, symbolizing unity and joy.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Dabke')">Read More</button>
+                    <div class="name" data-key="heritage_dabke_name">Dabke Dance</div>
+                    <div class="des" data-key="heritage_dabke_desc">A vibrant folk dance performed during celebrations, symbolizing unity and joy.</div>
+                    <button  data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Dabke')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Palestinian\ Thobe.jpg);">
                 <div class="content">
-                    <div class="name">Palestinian Thobe</div>
-                    <div class="des">The traditional embroidered women's dress represents the cultural and social identity of Palestinian women.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Palestinian_Thobe')">Read More</button>
+                    <div class="name" data-key="heritage_thobe_name">Palestinian Thobe</div>
+                    <div class="des" data-key="heritage_thobe_desc">The traditional embroidered women's dress represents the cultural and social identity of Palestinian women.</div>
+                    <button data-key="read_more" onclick="window.open('https://en.wikipedia.org/wiki/Palestinian_Thobe')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/f22218871f461ba91f0a42d17c292e20.jpg);">
                 <div class="content">
-                    <div class="name">Palestinian keffiyeh</div>
-                    <div class="des">The iconic black-and-white scarf symbolizing Palestinian identity and resistance.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Palestinian_keffiyeh')">Read More</button>
+                    <div class="name" data-key="heritage_keffiyeh_name">Palestinian keffiyeh</div>
+                    <div class="des" data-key="heritage_keffiyeh_desc">The iconic black-and-white scarf symbolizing Palestinian identity and resistance.</div>
+                    <button data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Palestinian_keffiyeh')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Olive\ Wood\ Carving.jpg);">
                 <div class="content">
-                    <div class="name">Olive Wood Carving</div>
-                    <div class="des">A handicraft that began in Bethlehem during the Byzantine era, where olive wood is carved into refined art that continues to this day.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Olive_wood_carving_in_Palestine')">Read More</button>
+                    <div class="name" data-key="heritage_olivewood_name">Olive Wood Carving</div>
+                    <div class="des" data-key="heritage_olivewood_desc">A handicraft that began in Bethlehem during the Byzantine era, where olive wood is carved into refined art that continues to this day.</div>
+                    <button  data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Olive_wood_carving_in_Palestine')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Hebron\ glass.jpg);">
                 <div class="content">
-                    <div class="name">Hebron glass</div>
-                    <div class="des">Traditional handmade glass making in Hebron has its roots in Roman times, and its secrets are kept preserved among artisan families.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Hebron_glass')">Read More</button>
+                    <div class="name" data-key="heritage_hebron_name">Hebron glass</div>
+                    <div class="des" data-key="heritage_hebron_desc">Traditional handmade glass making in Hebron has its roots in Roman times, and its secrets are kept preserved among artisan families.</div>
+                    <button data-key="read_more" onclick="window.open('https://en.wikipedia.org/wiki/Hebron_glass')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Palestinian\ hikaye.jpg);">
                 <div class="content">
-                    <div class="name">Hikaye</div>
-                    <div class="des">A traditional narrative style recounted by women in home gatherings, expressing the values and attitudes of Palestinian society.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Palestinian_hikaye')">Read More</button>
+                    <div class="name" data-key="heritage_hikaye_name">Hikaye</div>
+                    <div class="des" data-key="heritage_hikaye_desc">A traditional narrative style recounted by women in home gatherings, expressing the values and attitudes of Palestinian society.</div>
+                    <button data-key="read_more" onclick="window.open('https://en.wikipedia.org/wiki/Palestinian_hikaye')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Henna.jpg);">
                 <div class="content">
-                    <div class="name">Henna</div>
-                    <div class="des">Palestinian henna is a traditional art form used in celebrations, especially weddings, where intricate designs are applied to the hands and feet symbolizing joy, beauty, and cultural heritage.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Henna')">Read More</button>
+                    <div class="name" data-key="heritage_henna_name">Henna</div>
+                    <div class="des" data-key="heritage_henna_desc">Palestinian henna is a traditional art form used in celebrations, especially weddings, where intricate designs are applied to the hands and feet symbolizing joy, beauty, and cultural heritage.</div>
+                    <button  data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Henna')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Music\ of\ Palestine.webp);">
                 <div class="content">
-                    <div class="name">Music of Palestine</div>
-                    <div class="des">The Music of Palestine reflects the rich cultural heritage of the Palestinian people, blending traditional folk melodies with contemporary influences</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Music_of_Palestine')">Read More</button>
+                    <div class="name" data-key="heritage_music_name">Music of Palestine</div>
+                    <div class="des" data-key="heritage_music_desc">The Music of Palestine reflects the rich cultural heritage of the Palestinian people, blending traditional folk melodies with contemporary influences</div>
+                    <button  data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Music_of_Palestine')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Goblet\ drum.webp);">
                 <div class="content">
-                    <div class="name">Darbuka</div>
-                    <div class="des">The darbuka is a traditional hand drum widely used in Palestinian and Middle Eastern music, providing lively rhythms for weddings and celebrations.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Goblet_drum')">Read More</button>
+                    <div class="name" data-key="heritage_darbuka_name">Darbuka</div>
+                    <div class="des" data-key="heritage_darbuka_desc">The darbuka is a traditional hand drum widely used in Palestinian and Middle Eastern music, providing lively rhythms for weddings and celebrations.</div>
+                    <button  data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Goblet_drum')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Palestinian\ art.jpg);">
                 <div class="content">
-                    <div class="name">Palestinian art</div>
-                    <div class="des">Art expressing Palestinian identity and struggle through painting, sculpture, and graffiti, conveying messages of freedom and homeland.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Palestinian_art')">Read More</button>
+                    <div class="name" data-key="heritage_art_name">Palestinian art</div>
+                    <div class="des" data-key="heritage_art_desc">Art expressing Palestinian identity and struggle through painting, sculpture, and graffiti, conveying messages of freedom and homeland.</div>
+                    <button  data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Palestinian_art')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Jerusalem\ Markets.jpg);">
                 <div class="content">
-                    <div class="name">Jerusalem Markets</div>
-                    <div class="des">The old markets gather vendors and artisans in historic alleys, offering fruits, spices, and traditional crafts in a lively atmosphere.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Old_City_of_Jerusalem')">Read More</button>
+                    <div class="name" data-key="heritage_markets_name">Jerusalem Markets</div>
+                    <div class="des" data-key="heritage_markets_desc">The old markets gather vendors and artisans in historic alleys, offering fruits, spices, and traditional crafts in a lively atmosphere.</div>
+                    <button  data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Old_City_of_Jerusalem')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Olive\ Trees.jpg);">
                 <div class="content">
-                    <div class="name">Olive Trees</div>
-                    <div class="des">The olive tree is a symbol of peace and resilience in Palestine, and it is grown in most Palestinian lands.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Olive')">Read More</button>
+                    <div class="name" data-key="heritage_olives_name">Olive Trees</div>
+                    <div class="des" data-key="heritage_olives_desc">The olive tree is a symbol of peace and resilience in Palestine, and it is grown in most Palestinian lands.</div>
+                    <button  data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Olive')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Palestinian\ cuisine.png);">
                 <div class="content">
-                    <div class="name">Traditional Palestinian Cuisine</div>
-                    <div class="des"> Distinctive Palestinian dishes that reflect the richness of traditional Arab cuisine and are served on special occasions.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Palestinian_cuisine')">Read More</button>
+                    <div class="name" data-key="heritage_cuisine_name">Traditional Palestinian Cuisine</div>
+                    <div class="des" data-key="heritage_cuisine_desc"> Distinctive Palestinian dishes that reflect the richness of traditional Arab cuisine and are served on special occasions.</div>
+                    <button data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Palestinian_cuisine')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Pottery.jpg);">
                 <div class="content">
-                    <div class="name">Handmade pottery</div>
-                    <div class="des">traditional earthenwareHandmade vessels that reflect the arts of ancient Palestinian craftsmanship.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Pottery')">Read More</button>
+                    <div class="name" data-key="heritage_pottery_name">Handmade pottery</div>
+                    <div class="des" data-key="heritage_pottery_desc">traditional earthenwareHandmade vessels that reflect the arts of ancient Palestinian craftsmanship.</div>
+                    <button  data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Pottery')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Wood\ carving.webp);">
                 <div class="content">
-                    <div class="name">Wood carving</div>
-                    <div class="des">A traditional art that reflects the skill of Palestinians in making handicrafts.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Wood_carving')">Read More</button>
+                    <div class="name" data-key="heritage_wood_name">Wood carving</div>
+                    <div class="des" data-key="heritage_wood_desc">A traditional art that reflects the skill of Palestinians in making handicrafts.</div>
+                    <button data-key="read_more" onclick="window.open('https://en.wikipedia.org/wiki/Wood_carving')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Arabic\ calligraphyand\ decorations.webp);">
                 <div class="content">
-                    <div class="name">Islamic calligraphy</div>
-                    <div class="des">Arabic calligraphy and ornamentation is an ancient art form that adorns religious manuscripts, books, and mosques, expressing spiritual and cultural beauty.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Islamic_calligraphy')">Read More</button>
+                    <div class="name" data-key="heritage_calligraphy_name">Islamic calligraphy</div>
+                    <div class="des" data-key="heritage_calligraphy_desc">Arabic calligraphy and ornamentation is an ancient art form that adorns religious manuscripts, books, and mosques, expressing spiritual and cultural beauty.</div>
+                    <button data-key="read_more" onclick="window.open('https://en.wikipedia.org/wiki/Islamic_calligraphy')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Architecture\ of\ Palestine.jpg);">
                 <div class="content">
-                    <div class="name">Architecture of Palestine</div>
-                    <div class="des">The traditional Palestinian architecture is characterized by unique designs that reflect the traditions of the inhabitants and their daily lifestyles, with the use of local materials and ancient building techniques that preserve architectural heritage.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Architecture_of_Palestine')">Read More</button>
+                    <div class="name" data-key="heritage_architecture_name">Architecture of Palestine</div>
+                    <div class="des" data-key="heritage_architecture_desc">The traditional Palestinian architecture is characterized by unique designs that reflect the traditions of the inhabitants and their daily lifestyles, with the use of local materials and ancient building techniques that preserve architectural heritage.</div>
+                    <button  data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Architecture_of_Palestine')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Golden\ Markets.jpg);">
                 <div class="content">
-                    <div class="name">Golden Markets</div>
-                    <div class="des">Markets specializing in traditional and modern gold jewelry, featuring unique Palestinian designs.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Goldsmith')">Read More</button>
+                    <div class="name" data-key="heritage_gold_name">Golden Markets</div>
+                    <div class="des" data-key="heritage_gold_desc">Markets specializing in traditional and modern gold jewelry, featuring unique Palestinian designs.</div>
+                    <button  data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Goldsmith')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/Al-Zawiya\ Market\ –\ Gaza.png);">
                 <div class="content">
-                    <div class="name">Al-Zawiya Market</div>
-                    <div class="des">A historic and popular market in Gaza City, known for traditional shops selling fabrics, clothing, and handicrafts, reflecting Gaza’s authentic heritage.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Camel')">Read More</button>
+                    <div class="name" data-key="heritage_zawiya_name">Al-Zawiya Market</div>
+                    <div class="des" data-key="heritage_zawiya_desc">A historic and popular market in Gaza City, known for traditional shops selling fabrics, clothing, and handicrafts, reflecting Gaza’s authentic heritage.</div>
+                    <button  data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Camel')">Read More</button>
                 </div>
             </div>
             <div class="item" style="background-image: url(image/arabic-coffee-setting.jpg);">
                 <div class="content">
-                    <div class="name">Arabic coffee</div>
-                    <div class="des">Arabic coffee in Palestine is more than a drink; it’s a social ritual that brings people together. Made from freshly roasted beans, it’s served in small cups with dates, accompanied by conversation and hospitality as a sign of welcome.</div>
-                    <button onclick="window.open('https://en.wikipedia.org/wiki/Arabic_coffee')">Read More</button>
+                    <div class="name" data-key="heritage_coffee_name">Arabic coffee</div>
+                    <div class="des" data-key="heritage_coffee_desc">Arabic coffee in Palestine is more than a drink; it’s a social ritual that brings people together. Made from freshly roasted beans, it’s served in small cups with dates, accompanied by conversation and hospitality as a sign of welcome.</div>
+                    <button data-key="read_more"onclick="window.open('https://en.wikipedia.org/wiki/Arabic_coffee')">Read More</button>
                 </div>
             </div>
         </div>
@@ -572,7 +579,7 @@
 </section>
          <!-- Palestinian cuisine section -->
 <section id="cuisine" class="wrapper">
-    <h2 class="section-title">Palestinian Cuisine</h2>
+    <h2 class="section-title" data-key="cuisine_title">Palestinian Cuisine</h2>
     <div class="container">
 
          <!-- Cuisine slide  -->
@@ -581,8 +588,8 @@
     <div class="row">
         <div class="icon">1</div>
         <div class="description">
-            <h4>Maqluba</h4>
-            <p>Rice dish with vegetables like eggplant or cauliflower, and meat or chicken, flipped upside down before serving.</p>
+            <h4 data-key="cuisine_maqluba_name">Maqluba</h4>
+            <p data-key="cuisine_maqluba_desc">Rice dish with vegetables like eggplant or cauliflower, and meat or chicken, flipped upside down before serving.</p>
         </div>
     </div>
 </label>
@@ -591,8 +598,8 @@
     <div class="row">
         <div class="icon">2</div>
         <div class="description">
-            <h4>Musakhan</h4>
-            <p>Chicken cooked with caramelized onions and sumac, served on traditional flatbread.</p>
+            <h4 data-key="cuisine_musakhan_name">Musakhan</h4>
+            <p data-key="cuisine_musakhan_desc">Chicken cooked with caramelized onions and sumac, served on traditional flatbread.</p>
         </div>
     </div>
 </label>
@@ -601,8 +608,8 @@
     <div class="row">
         <div class="icon">3</div>
         <div class="description">
-            <h4>Knafeh Nabulsiya</h4>
-            <p>Sweet made of shredded dough with cheese or cream, topped with syrup, from Nablus.</p>
+            <h4 data-key="cuisine_knafeh_name">Knafeh Nabulsiya</h4>
+            <p data-key="cuisine_knafeh_desc">Sweet made of shredded dough with cheese or cream, topped with syrup, from Nablus.</p>
         </div>
     </div>
 </label>
@@ -611,8 +618,8 @@
     <div class="row">
         <div class="icon">4</div>
         <div class="description">
-            <h4>Maamoul</h4>
-            <p>Cookies filled with date, walnut, or pistachio, baked and served during holidays.</p>
+            <h4 data-key="cuisine_maamoul_name">Maamoul</h4>
+            <p data-key="cuisine_maamoul_desc">Cookies filled with date, walnut, or pistachio, baked and served during holidays.</p>
         </div>
     </div>
 </label>
@@ -621,8 +628,8 @@
     <div class="row">
         <div class="icon">5</div>
         <div class="description">
-            <h4>Maftoul</h4>
-            <p>traditional Palestinian dish made from steamed crushed wheat grains, served with vegetable broth and meat or chicken</p>
+            <h4 data-key="cuisine_maftoul_name">Maftoul</h4>
+            <p data-key="cuisine_maftoul_desc">traditional Palestinian dish made from steamed crushed wheat grains, served with vegetable broth and meat or chicken</p>
         </div>
     </div>
 </label>
@@ -631,8 +638,8 @@
     <div class="row">
         <div class="icon">6</div>
         <div class="description">
-            <h4>Falafel</h4>
-            <p> Deep-fried balls made from ground chickpeas or fava beans mixed with herbs and spices, a popular Palestinian breakfast dish.</p>
+            <h4 data-key="cuisine_falafel_name">Falafel</h4>
+            <p data-key="cuisine_falafel_desc"> Deep-fried balls made from ground chickpeas or ground legumes mixed with herbs and spices, they are a popular Palestinian breakfast dish.</p>
         </div>
     </div>
 </label>
@@ -641,8 +648,8 @@
     <div class="row">
         <div class="icon">7</div>
         <div class="description">
-            <h4>Hummus</h4>
-            <p>Mashed chickpeas with tahini and olive oil, served with bread or vegetables.</p>
+            <h4 data-key="cuisine_hummus_name">Hummus</h4>
+            <p data-key="cuisine_hummus_desc">Mashed chickpeas with tahini and olive oil, served with bread or vegetables.</p>
         </div>
     </div>
 </label>
@@ -651,8 +658,8 @@
     <div class="row">
         <div class="icon">8</div>
         <div class="description">
-            <h4>Baba Ghanoush</h4>
-            <p>Smoked eggplant hummus with tahini, garlic, and lemon is considered an appetizer.</p>
+            <h4 data-key="cuisine_baba_name">Baba Ghanoush</h4>
+            <p data-key="cuisine_baba_desc">Smoked eggplant hummus with tahini, garlic, and lemon is considered an appetizer.</p>
         </div>
     </div>
 </label>
@@ -661,8 +668,8 @@
     <div class="row">
         <div class="icon">9</div>
         <div class="description">
-            <h4>Grilled Eggplant Salad</h4>
-            <p>Mashed grilled eggplant with tomatoes, garlic, and lemon juice.</p>
+            <h4 data-key="cuisine_salad_name">Grilled Eggplant Salad</h4>
+            <p data-key="cuisine_salad_desc">Mashed grilled eggplant with tomatoes, garlic, and lemon juice.</p>
         </div>
     </div>
 </label>
@@ -671,8 +678,8 @@
     <div class="row">
         <div class="icon">10</div>
         <div class="description">
-            <h4>Warak Dawali</h4>
-            <p>Grape leaves are stuffed with a mixture of rice, meat, onions, and spices, then slowly cooked in a lemon and oil sauce .</p>
+            <h4 data-key="cuisine_warak_name">Warak Dawali</h4>
+            <p data-key="cuisine_warak_desc">Grape leaves are stuffed with a mixture of rice, meat, onions, and spices, then slowly cooked in a lemon and oil sauce .</p>
         </div>
     </div>
 </label>
@@ -681,8 +688,8 @@
     <div class="row">
         <div class="icon">11</div>
         <div class="description">
-            <h4>Freekeh</h4>
-            <p>A traditional Palestinian dish made from roasted green wheat served with meat or chicken, characterized by a distinctive smoky flavor.</p>
+            <h4  data-key="cuisine_freekeh_name">Freekeh</h4>
+            <p data-key="cuisine_freekeh_desc">A traditional Palestinian dish made from roasted green wheat served with meat or chicken, characterized by a distinctive smoky flavor.</p>
         </div>
     </div>
 </label>
@@ -691,8 +698,8 @@
     <div class="row">
         <div class="icon">12</div>
         <div class="description">
-            <h4>Qidra</h4>
-            <p>A dish of rice and meat is cooked in a clay pot underground to become tender and rich in flavors.</p>
+            <h4 data-key="cuisine_qidra_name">Qidra</h4>
+            <p data-key="cuisine_qidra_desc">A dish of rice and meat is cooked in a clay pot underground to become tender and rich in flavors.</p>
         </div>
     </div>
 </label>
@@ -701,8 +708,8 @@
     <div class="row">
         <div class="icon">13</div>
         <div class="description">
-            <h4>Mabathara</h4>
-            <p>Potatoes with eggs, a simple dish of diced and fried potatoes quickly cooked with eggs, usually served for breakfast.</p>
+            <h4 data-key="cuisine_mabathara_name">Mabathara</h4>
+            <p data-key="cuisine_mabathara_desc">Potatoes with eggs, a simple dish of diced and fried potatoes quickly cooked with eggs, usually served for breakfast.</p>
         </div>
     </div>
 </label>
@@ -711,8 +718,8 @@
     <div class="row">
         <div class="icon">14</div>
         <div class="description">
-            <h4>Ka'ak of Jerusalem</h4>
-            <p>Traditional bread from the city of Jerusalem, characterized by its rectangular shape fully covered with sesame seeds.</p>
+            <h4 data-key="cuisine_kaak_name">Ka'ak of Jerusalem</h4>
+            <p data-key="cuisine_kaak_desc">Traditional bread from the city of Jerusalem, characterized by its rectangular shape fully covered with sesame seeds.</p>
         </div>
     </div>
 </label>
@@ -721,8 +728,8 @@
     <div class="row">
         <div class="icon">15</div>
         <div class="description">
-            <h4>Namoura</h4>
-            <p>A traditional Eastern sweet made from semolina, baked and soaked in honey or syrup, characterized by its sweet taste and soft texture.</p>
+            <h4 data-key="cuisine_namoura_name">Namoura</h4>
+            <p data-key="cuisine_namoura_desc">A traditional Eastern sweet made from semolina, baked and soaked in honey or syrup, characterized by its sweet taste and soft texture.</p>
         </div>
     </div>
 </label>
@@ -731,8 +738,8 @@
     <div class="row">
         <div class="icon">16</div>
         <div class="description">
-            <h4>Musaffan bread</h4>
-            <p>Bread rolls rich in olive oil, turmeric, black cumin, sesame, anise, and fennel, usually served with tea as a delicious breakfast.</p>
+            <h4 data-key="cuisine_musaffan_name">Musaffan bread</h4>
+            <p data-key="cuisine_musaffan_desc">Bread rolls rich in olive oil, turmeric, black cumin, sesame, anise, and fennel, usually served with tea as a delicious breakfast.</p>
         </div>
     </div>
 </label>
@@ -741,8 +748,8 @@
     <div class="row">
         <div class="icon">17</div>
         <div class="description">
-            <h4>Mulukhiyah</h4>
-            <p>Green leafy soup with meat or chicken, served with rice.</p>
+            <h4 data-key="cuisine_mulukhiyah_name">Mulukhiyah</h4>
+            <p data-key="cuisine_mulukhiyah_desc">Green leafy soup with meat or chicken, served with rice.</p>
         </div>
     </div>
 </label>
@@ -751,8 +758,8 @@
     <div class="row">
         <div class="icon">18</div>
         <div class="description">
-            <h4>Baladi cheese </h4>
-            <p>Fresh and soft Palestinian cheese made by hand, characterized by its rich flavor, is eaten with olives and fresh bread.</p>
+            <h4 data-key="cuisine_baladi_name">Baladi cheese </h4>
+            <p data-key="cuisine_baladi_desc">Fresh and soft Palestinian cheese made by hand, characterized by its rich flavor, is eaten with olives and fresh bread.</p>
         </div>
     </div>
 </label>
@@ -761,8 +768,8 @@
     <div class="row">
         <div class="icon">19</div>
         <div class="description">
-            <h4>Zhourat drink</h4>
-            <p> A warm Palestinian drink made from herbs and dried flowers that is consumed for relaxation and health.</p>
+            <h4 data-key="cuisine_zhourat_name">Zhourat drink</h4>
+            <p data-key="cuisine_zhourat_desc"> A warm Palestinian drink made from herbs and dried flowers that is consumed for relaxation and health.</p>
         </div>
     </div>
 </label>
@@ -771,8 +778,8 @@
     <div class="row">
         <div class="icon">20</div>
         <div class="description">
-            <h4>Tahini Salad</h4>
-            <p>Fresh salad with tahini dressing.</p>
+            <h4 data-key="cuisine_tahini_name">Tahini Salad</h4>
+            <p data-key="cuisine_tahini_desc">Fresh salad with tahini dressing.</p>
         </div>
     </div>
 </label>
@@ -781,8 +788,8 @@
     <div class="row">
         <div class="icon">21</div>
         <div class="description">
-            <h4>Wild Za'atar </h4>
-            <p>A Palestinian wild herb used in cooking that gives a distinctive flavor to traditional dishes.</p>
+            <h4 data-key="cuisine_zaatar_name">Wild Za'atar </h4>
+            <p data-key="cuisine_zaatar_desc">A Palestinian wild herb used in cooking that gives a distinctive flavor to traditional dishes.</p>
         </div>
     </div>
 </label>
@@ -791,8 +798,8 @@
     <div class="row">
         <div class="icon">22</div>
         <div class="description">
-            <h4>Fattet Hummus </h4>
-            <p>dish made with layers of crispy bread, chickpeas, tahini sauce, yogurt, and spices, often served as a hearty breakfast or appetizer.</p>
+            <h4 data-key="cuisine_fattet_name">Fattet Hummus </h4>
+            <p data-key="cuisine_fattet_desc">dish made with layers of crispy bread, chickpeas, tahini sauce, yogurt, and spices, often served as a hearty breakfast or appetizer.</p>
         </div>
     </div>
 </label>
@@ -801,8 +808,8 @@
     <div class="row">
         <div class="icon">23</div>
         <div class="description">
-            <h4>Qatayef</h4>
-            <p>It is a sweet pastry, consisting of dumplings filled with sweet cheese or nuts, then baked or fried and soaked in syrup.</p>
+            <h4 data-key="cuisine_qatayef_name">Qatayef</h4>
+            <p data-key="cuisine_qatayef_desc">It is a sweet pastry, consisting of dumplings filled with sweet cheese or nuts, then baked or fried and soaked in syrup.</p>
         </div>
     </div>
 </label>
@@ -811,8 +818,8 @@
     <div class="row">
         <div class="icon">24</div>
         <div class="description">
-            <h4>Palestinian Fatteh</h4>
-            <p>Layers of bread soaked in broth, topped with rice and tender chicken or meat, and sprinkled with crunchy roasted almonds and pine nuts.</p>
+            <h4 data-key="cuisine_fatteh_name">Palestinian Fatteh</h4>
+            <p data-key="cuisine_fatteh_desc">Layers of bread soaked in broth, topped with rice and tender chicken or meat, and sprinkled with crunchy roasted almonds and pine nuts.</p>
         </div>
     </div>
 </label>
@@ -821,8 +828,8 @@
     <div class="row">
         <div class="icon">25</div>
         <div class="description">
-            <h4>Dukkah with Olive Oil </h4>
-            <p>A mix of grains and spices, it is widely sold in Gaza and used in manakish with oil.</p>
+            <h4 data-key="cuisine_dukkah_name">Dukkah with Olive Oil </h4>
+            <p data-key="cuisine_dukkah_desc">A mix of grains and spices, it is widely sold in Gaza and used in manakish with oil.</p>
         </div>
     </div>
 </label>
@@ -831,8 +838,8 @@
     <div class="row">
         <div class="icon">26</div>
         <div class="description">
-            <h4>Gazan Dakkah Salad</h4>
-            <p>A popular salad from Gaza, prepared with crushed dill, hot pepper, garlic, cumin, salt, tomatoes, and a little lemon.</p>
+            <h4 data-key="cuisine_dakkah_name">Gazan Dakkah Salad</h4>
+            <p data-key="cuisine_dakkah_desc">A popular salad from Gaza, prepared with crushed dill, hot pepper, garlic, cumin, salt, tomatoes, and a little lemon.</p>
         </div>
     </div>
 </label>
@@ -841,8 +848,8 @@
     <div class="row">
         <div class="icon">27</div>
         <div class="description">
-            <h4>Mohallebi</h4>
-            <p>a milk pudding usually made from sugar, milk, and starch, and it is commonly served as a dessert in the Middle East.</p>
+            <h4 data-key="cuisine_mohallebi_name">Mohallebi</h4>
+            <p data-key="cuisine_mohallebi_desc">a milk pudding usually made from sugar, milk, and starch, and it is commonly served as a dessert in the Middle East.</p>
         </div>
     </div>
 </label>
@@ -851,8 +858,8 @@
     <div class="row">
         <div class="icon">28</div>
         <div class="description">
-            <h4>Okra with meat</h4>
-            <p>is a dish that is prepared in the Middle East using lamb, okra, and tomatoes as key ingredients.</p>
+            <h4 data-key="cuisine_okra_name">Okra with meat</h4>
+            <p data-key="cuisine_okra_desc">is a dish that is prepared in the Middle East using lamb, okra, and tomatoes as key ingredients.</p>
         </div>
     </div>
 </label>
@@ -861,8 +868,8 @@
     <div class="row">
         <div class="icon">29</div>
         <div class="description">
-            <h4>Rice with milk</h4>
-            <p>is a dish that mainly consists of rice, water or milk, in addition to other ingredients such as cinnamon and raisins.</p>
+            <h4 data-key="cuisine_rice_milk_name">Rice with milk</h4>
+            <p data-key="cuisine_rice_milk_desc">is a dish that mainly consists of rice, water or milk, in addition to other ingredients such as cinnamon and raisins.</p>
         </div>
     </div>
 </label>
@@ -871,8 +878,8 @@
     <div class="row">
         <div class="icon">30</div>
         <div class="description">
-            <h4>Palestinian Ftir (Mutabbaq)</h4>
-            <p>where thin layers of dough are arranged with generous amounts of olive oil or ghee, then folded and baked. It is served as either a savory or sweet dish.</p>
+            <h4 data-key="cuisine_mutabbaq_name">Palestinian Ftir (Mutabbaq)</h4>
+            <p data-key="cuisine_mutabbaq_desc">where thin layers of dough are arranged with generous amounts of olive oil or ghee, then folded and baked. It is served as either a savory or sweet dish.</p>
         </div>
     </div>
 </label>
@@ -880,34 +887,34 @@
        <!-- Interactive map section -->
 <section id="map" class="map-section">
     <div class="section-title">
-        <h2>Map of Palestine</h2>
-        <p>Click on a city to view its details above.</p>
+        <h2 data-key="map_title">Map of Palestine</h2>
+        <p data-key="map_text">Click on a city to view its details above.</p>
     </div>
 
     <div class="map-container">
         <img src="image/map.png" alt="Map of Palestine" class="map-image">
 
           <!-- Map points for cities -->
-        <div class="map-point" style="top: 37.3%; left: 55.8%;" data-target="jerusalem" data-name="Jerusalem"></div>
-        <div class="map-point" style="top: 45.5%; left: 51%;" data-target="hebron" data-name="Hebron"></div>
-        <div class="map-point" style="top: 29%; left: 54.8%;" data-target="nablus" data-name="Nablus"></div>
-        <div class="map-point" style="top: 23%; left: 54.3%;" data-target="jenin" data-name="Jenin"></div>
-        <div class="map-point" style="top: 26.5%; left: 51.6%;" data-target="tulkarm" data-name="Tulkarm"></div>
-        <div class="map-point" style="top: 16.9%; left: 48%;" data-target="haifa" data-name="Haifa"></div>
-        <div class="map-point" style="top: 13%; left: 51%;" data-target="acre" data-name="Acre"></div>
-        <div class="map-point" style="top: 10%; left: 58%;" data-target="safed" data-name="Safed"></div>
-        <div class="map-point" style="top: 15.7%; left: 62%;" data-target="tiberias" data-name="Tiberias"></div>
-        <div class="map-point" style="top: 39%; left: 54%;" data-target="bethlehem" data-name="Bethlehem"></div>
-        <div class="map-point" style="top: 31%; left: 53%;" data-target="ramallah" data-name="Ramallah"></div>
-        <div class="map-point" style="top: 35%; left: 61%;" data-target="jericho" data-name="Jericho"></div>
-        <div class="map-point" style="top: 33.3%; left: 47%;" data-target="lod" data-name="Lod"></div>
-        <div class="map-point" style="top: 35%; left: 47.7%;" data-target="ramla" data-name="Ramla"></div>
-        <div class="map-point" style="top: 33.2%; left: 42.8%;" data-target="yaffa" data-name="Yaffa"></div>
-        <div class="map-point" style="top: 43%; left: 35.7%;" data-target="gaza" data-name="Gaza"></div>
-        <div class="map-point" style="top: 50%; left: 46%;" data-target="beersheba"data-name="Beersheba "></div>
-        <div class="map-point" style="top: 65%; left: 50%;" data-target="negev" data-name="Negev Desert"></div>
-        <div class="map-point" style="top: 22.1%; left: 63%;" data-target="beisan" data-name="Beisan"></div>
-        <div class="map-point" style="top: 18%; left: 56%;" data-target="nazareth" data-name="Nazareth"></div>
+        <div class="map-point" style="top: 37.3%; left: 55.8%;" data-target="jerusalem" data-name="Jerusalem" data-key="city_jerusalem"></div>
+        <div class="map-point" style="top: 45.5%; left: 51%;" data-target="hebron" data-name="Hebron" data-key="city_hebron"></div>
+        <div class="map-point" style="top: 29%; left: 54.8%;" data-target="nablus" data-name="Nablus" data-key="city_nablus"></div>
+        <div class="map-point" style="top: 23%; left: 54.3%;" data-target="jenin" data-name="Jenin" data-key="city_jenin"></div>
+        <div class="map-point" style="top: 26.5%; left: 51.6%;" data-target="tulkarm" data-name="Tulkarm" data-key="city_tulkarm"></div>
+        <div class="map-point" style="top: 16.9%; left: 48%;" data-target="haifa" data-name="Haifa" data-key="city_haifa"></div>
+        <div class="map-point" style="top: 13%; left: 51%;" data-target="acre" data-name="Acre" data-key="city_acre"></div>
+        <div class="map-point" style="top: 10%; left: 58%;" data-target="safed" data-name="Safed" data-key="city_safed"></div>
+        <div class="map-point" style="top: 15.7%; left: 62%;" data-target="tiberias" data-name="Tiberias" data-key="city_tiberias"></div>
+        <div class="map-point" style="top: 39%; left: 54%;" data-target="bethlehem" data-name="Bethlehem" data-key="city_bethlehem"></div>
+        <div class="map-point" style="top: 31%; left: 53%;" data-target="ramallah" data-name="Ramallah" data-key="city_ramallah"></div>
+        <div class="map-point" style="top: 35%; left: 61%;" data-target="jericho" data-name="Jericho" data-key="city_jericho"></div>
+        <div class="map-point" style="top: 33.3%; left: 47%;" data-target="lod" data-name="Lod" data-key="city_lod"></div>
+        <div class="map-point" style="top: 35%; left: 47.7%;" data-target="ramla" data-name="Ramla" data-key="city_ramla"></div>
+        <div class="map-point" style="top: 33.2%; left: 42.8%;" data-target="yaffa" data-name="Yaffa" data-key="city_yaffa"></div>
+        <div class="map-point" style="top: 43%; left: 35.7%;" data-target="gaza" data-name="Gaza" data-key="city_gaza"></div>
+        <div class="map-point" style="top: 50%; left: 46%;" data-target="beersheba"data-name="Beersheba " data-key="city_beersheba"></div>
+        <div class="map-point" style="top: 65%; left: 50%;" data-target="negev" data-name="Negev Desert" data-key="city_negev"></div>
+        <div class="map-point" style="top: 22.1%; left: 63%;" data-target="beisan" data-name="Beisan" data-key="city_beisan"></div>
+        <div class="map-point" style="top: 18%; left: 56%;" data-target="nazareth" data-name="Nazareth" data-key="city_nazareth"></div>
     </div>
 </section>
 <!-- About section providing information about the website -->
@@ -918,40 +925,40 @@
     <!-- Logo and Project Name -->
     <div class="about-logo-wrapper">
       <img src="image/logo.png" alt="Palestine Logo" class="about-logo">
-      <h1 class="project-name">Light of Canaan</h1>
+      <h1 class="project-name" data-key="about_project_name">Light of Canaan</h1>
     </div>
 
     <!-- Goal and Description -->
     <div class="about-content">
-      <h2 class="about-title">Our Mission</h2>
-      <p class="about-goal">
+      <h2 class="about-title" data-key="about_mission_title">Our Mission</h2>
+      <p class="about-goal" data-key="about_mission_text">
         To preserve and share Palestine’s heritage, culture, and beauty with the world 
         through an interactive and engaging digital experience.
       </p>
 
-      <h2 class="about-title">About the website</h2>
-      <p class="about-description">
+      <h2 class="about-title" data-key="about_about_title">About the website</h2>
+      <p class="about-description" data-key="about_about_text">
         Light of Canaan is a platform where history meets technology. From ancient 
         cities to delicious cuisine, you can explore the soul of Palestine through rich 
         visuals, interactive maps, and curated stories.
       </p>
 
       <div class="about-cta">
-        <p> Join us in this journey and explore Palestine like never before!</p>
-        <a href="#content" class="cta-button">Start Exploring</a>
+        <p data-key="about_cta_text"> Join us in this journey and explore Palestine like never before!</p>
+        <a href="#content" class="cta-button"  data-key="about_cta_button">Start Exploring</a>
       </div>
     </div>
   </div>
 </section>
 <!-- Favorites Section -->
 <section id="favorite" class="favorites-placeholder">
-    <h2>My Favorites</h2>
-    <p> This feature will be available in the future. Stay tuned!</p>
+    <h2 data-key="favorites_title">My Favorites</h2>
+    <p data-key="favorites_text"> This feature will be available in the future. Stay tuned!</p>
 </section>
 <!-- Social Media Section -->
 <section class="social-section">
     <div class="social-content">
-        <h3>Get social</h3>
+        <h3 data-key="social_title">Get social</h3>
         <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
